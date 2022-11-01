@@ -4,7 +4,9 @@
   "description": "<h1 align=\"center\">Hola 👋, soy Gustavo</h1><h3 align=\"center\">PreEntrega2 Castro</h3><p align=\"left\"> <img src=\"https://komarev.com/ghpvc/?username=gustycastro&label=Profile%20views&color=0e75b6&style=flat\" alt=\"gustycastro\" /> </p>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass scss/style.scss style/style.css",
+    "watch-css": "nodemon-e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
