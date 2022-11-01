@@ -8,10 +8,8 @@ body {
   background-color: rgb(27, 27, 27);
   font-family: "Arsenal", sans-serif;
   overflow-x: hidden;
-  color: whitesmoke;
   line-height: normal;
-  -webkit-text-size-adjust: none;
-  -webkit-tap-highlight-color: rgb(4, 0, 0);
+  color: whitesmoke;
 }
 body a {
   color: whitesmoke !important;
@@ -37,12 +35,6 @@ h1 {
   letter-spacing: 3px;
   margin: 20px auto 20px 220px;
   font-weight: bold;
-}
-
-:root {
-  --facebook: #3b5999;
-  --instagram: #e4405f;
-  --youtube: red;
 }
 
 /* ---------------------------------- HEADER --------------------------------- */
@@ -546,13 +538,13 @@ h1 {
   filter: none;
 }
 .redes .facebook:hover i {
-  background: var(--facebook);
+  background: #3b5999;
 }
 .redes .instagram:hover i {
-  background: var(--instagram);
+  background: #e4405f;
 }
 .redes .youtube:hover i {
-  background: var(--youtube);
+  background: red;
 }
 
 @media (min-width: 1200px) {
@@ -1349,7 +1341,7 @@ h1 {
   }
   /*--- TIENDA ---*/
   .portada__tienda {
-    width: 100vw;
+    width: 98vw;
     height: 60vh;
     margin: 0;
   }
