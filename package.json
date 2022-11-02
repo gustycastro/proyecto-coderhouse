@@ -1,7 +1,7 @@
 {
   "name": "proyecto",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">Hola 👋, soy Gustavo</h1><h3 align=\"center\">PreEntrega2 Castro</h3><p align=\"left\"> <img src=\"https://komarev.com/ghpvc/?username=gustycastro&label=Profile%20views&color=0e75b6&style=flat\" alt=\"gustycastro\" /> </p>",
+  "description": "Hola mi nombre es Gustavo y este es mi proyecto del curso de desarrollo web en CoderHouse",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
