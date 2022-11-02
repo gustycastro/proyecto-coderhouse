@@ -98,7 +98,7 @@ h1 {
 
 /* ---------------------------------- INDEX --------------------------------- */
 .portada__index {
-  width: 170vh;
+  width: 1100px;
   height: 80vh;
   margin-left: 250px;
   max-width: 100%;
@@ -120,20 +120,20 @@ h1 {
   display: flex;
   padding: 20px;
 }
-.border__imgbody .img {
+.border__imgbody .img__body .img {
   width: 310px;
   height: 310px;
   max-width: 100%;
   box-shadow: 10px 10px 0px 0px rgb(3, 0, 0);
 }
-.border__imgbody .index__inframe {
+.border__imgbody .img__body .index__inframe {
   margin-left: 54px;
   box-shadow: 10px 10px 0px 0px rgb(3, 0, 0);
 }
 
 /* -------------------------------- SERVICIOS ------------------------------- */
 .portada__servicio {
-  width: 170vh;
+  width: 1100px;
   height: 80vh;
   margin-left: 250px;
   max-width: 100%;
@@ -144,14 +144,7 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
-.servicios h5 {
-  font-size: 36px;
-  font-variant: small-caps;
-  text-align: center;
-  font-weight: 400;
-  padding-top: 20px;
-}
-.servicios .servicios__icon {
+.servicios div .servicios__icon {
   margin-top: 30px;
   width: 300px;
   height: 300px;
@@ -161,19 +154,26 @@ h1 {
   box-shadow: 0px 0px 20px 5px whitesmoke;
   transition: 0.5s;
 }
-.servicios .servicios__icon:hover {
+.servicios div .servicios__icon:hover {
   transform: scale(1.05);
+}
+.servicios div h5 {
+  font-size: 36px;
+  font-variant: small-caps;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 20px;
 }
 
 .portada__crossfit {
-  width: 170vh;
+  width: 1100px;
   height: 80vh;
   margin-left: 250px;
   max-width: 100%;
 }
 
 .portada__boxeo {
-  width: 170vh;
+  width: 1100px;
   height: 80vh;
   margin-left: 250px;
   max-width: 100%;
@@ -237,7 +237,7 @@ h1 {
 
 /* --------------------------------- TIENDA --------------------------------- */
 .portada__tienda {
-  width: 170vh;
+  width: 1100px;
   height: 80vh;
   margin-left: 250px;
   max-width: 100%;
@@ -669,8 +669,8 @@ h1 {
     margin: 20px auto 20px 0px;
   }
   .portada__index {
-    width: 170vw;
-    height: 80vh;
+    width: 1100px;
+    height: 84vh;
     margin: 0;
   }
   .intro__p {
@@ -682,8 +682,8 @@ h1 {
   }
   /*--- SERVICIOS ---*/
   .portada__servicio {
-    width: 170vw;
-    height: 80vh;
+    width: 1100px;
+    height: 84vh;
     margin: 0;
   }
   .servicios {
@@ -692,13 +692,13 @@ h1 {
     margin: 0;
   }
   .portada__crossfit {
-    width: 170vw;
-    height: 80vh;
+    width: 1100px;
+    height: 84vh;
     margin: 0;
   }
   .portada__boxeo {
-    width: 170vw;
-    height: 80vh;
+    width: 1100px;
+    height: 84vh;
     margin: 0;
   }
   .crossbox {
@@ -708,8 +708,8 @@ h1 {
   }
   /*--- TIENDA ---*/
   .portada__tienda {
-    width: 170vw;
-    height: 80vh;
+    width: 1100px;
+    height: 84vh;
     margin: 0;
   }
   .tienda {
@@ -953,8 +953,8 @@ h1 {
   }
   /*--- INDEX ---*/
   .portada__index {
-    width: 180vh;
-    height: 70vh;
+    width: 800px;
+    height: 60vh;
     margin: 0;
   }
   h1 {
@@ -985,8 +985,8 @@ h1 {
   }
   /*--- SERVICIOS ---*/
   .portada__servicio {
-    width: 180vw;
-    height: 70vh;
+    width: 800px;
+    height: 60vh;
     margin: 0;
   }
   .servicios {
@@ -996,13 +996,13 @@ h1 {
     margin: 0;
   }
   .portada__crossfit {
-    width: 180vw;
-    height: 70vh;
+    width: 800px;
+    height: 60vh;
     margin: 0;
   }
   .portada__boxeo {
-    width: 180vw;
-    height: 70vh;
+    width: 800px;
+    height: 60vh;
     margin: 0;
   }
   .crossbox {
@@ -1016,8 +1016,8 @@ h1 {
   }
   /*--- TIENDA ---*/
   .portada__tienda {
-    width: 180vw;
-    height: 70vh;
+    width: 800px;
+    height: 65vh;
     margin: 0;
   }
   .tienda {
@@ -1033,18 +1033,18 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 10px;
-    height: 150vh;
+    height: 130vh;
   }
   .tienda .tienda__div .remerah {
     grid-area: remerah;
   }
   .tienda .tienda__div .remerah .img__remerah {
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
   }
   .tienda .tienda__div .remerah .btn__remeras {
     margin-top: 5px;
-    width: 300px;
+    width: 250px;
     height: 33px;
   }
   .tienda .tienda__div .remerah .btn__remeras .btn__span {
@@ -1055,12 +1055,12 @@ h1 {
   }
   .tienda .tienda__div .zapatillash .img__zapash {
     margin-top: 5px;
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
   }
   .tienda .tienda__div .zapatillash .btn__zapatillas {
     margin-top: 5px;
-    width: 300px;
+    width: 250px;
     height: 33px;
   }
   .tienda .tienda__div .zapatillash .btn__zapatillas .btn__span {
@@ -1071,12 +1071,12 @@ h1 {
   }
   .tienda .tienda__div .calleras .img__calleras {
     margin-top: 5px;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
   .tienda .tienda__div .calleras .btn__guantes {
     margin-top: 5px;
-    width: 300px;
+    width: 250px;
     height: 33px;
   }
   .tienda .tienda__div .calleras .btn__guantes .btn__span {
@@ -1087,12 +1087,12 @@ h1 {
   }
   .tienda .tienda__div .guantesb .img__guantesb {
     margin-top: 5px;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
   .tienda .tienda__div .guantesb .btn__guantes {
     margin-top: 5px;
-    width: 300px;
+    width: 250px;
     height: 33px;
   }
   .tienda .tienda__div .guantesb .btn__guantes .btn__span {
@@ -1103,12 +1103,12 @@ h1 {
   }
   .tienda .tienda__div .zapatillasm .img__zapasm {
     margin-top: 5px;
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 150px;
   }
   .tienda .tienda__div .zapatillasm .btn__zapatillas {
     margin-top: 5px;
-    width: 300px;
+    width: 250px;
     height: 33px;
   }
   .tienda .tienda__div .zapatillasm .btn__zapatillas .btn__span {
@@ -1119,12 +1119,12 @@ h1 {
   }
   .tienda .tienda__div .remeram .img__remeram {
     margin-top: 30px;
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
   }
   .tienda .tienda__div .remeram .btn__remeras {
     margin-top: 5px;
-    width: 300px;
+    width: 250px;
     height: 33px;
   }
   .tienda .tienda__div .remeram .btn__remeras .btn__span {
@@ -1261,8 +1261,8 @@ h1 {
   }
   /*--- INDEX ---*/
   .portada__index {
-    width: 98vw;
-    height: 60vh;
+    width: 600px;
+    height: 55vh;
     margin: 0;
   }
   h1 {
@@ -1293,8 +1293,8 @@ h1 {
   }
   /*--- SERVICIOS ---*/
   .portada__servicio {
-    width: 98vw;
-    height: 60vh;
+    width: 600px;
+    height: 55vh;
     margin: 0;
   }
   .servicios {
@@ -1304,14 +1304,18 @@ h1 {
     align-items: center;
     margin: 0;
   }
+  .servicios div .servicios__icon {
+    width: 250px;
+    height: 250px;
+  }
   .portada__crossfit {
-    width: 98vw;
-    height: 60vh;
+    width: 600px;
+    height: 55vh;
     margin: 0;
   }
   .portada__boxeo {
-    width: 98vw;
-    height: 60vh;
+    width: 600px;
+    height: 55vh;
     margin: 0;
   }
   .crossbox {
@@ -1341,8 +1345,8 @@ h1 {
   }
   /*--- TIENDA ---*/
   .portada__tienda {
-    width: 98vw;
-    height: 60vh;
+    width: 600px;
+    height: 55vh;
     margin: 0;
   }
   .tienda {
@@ -1463,6 +1467,7 @@ h1 {
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
     box-shadow: 0px 0px 30px 10px whitesmoke;
+    width: 350px;
   }
   .formulario__border .formulario {
     display: flex;

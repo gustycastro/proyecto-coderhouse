@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2? family=Arsenal&display=swap');
 @import "colores";
+
 *{
     margin: 0;
     padding: 0;
@@ -92,7 +93,7 @@ h1{
 
 /* ---------------------------------- INDEX --------------------------------- */
 .portada__index{
-    width: 170vh;
+    width: 1100px;
     height: 80vh;
     margin-left: 250px;
     max-width: 100%;  
@@ -110,23 +111,23 @@ h1{
     margin: 30px 30px 40px 280px; 
     .img__body{
         display: flex;
-        padding: 20px
-    }
-    .img{
-        width: 310px;
-        height: 310px;
-        max-width: 100%;
-        box-shadow: 10px 10px 0px 0px $color-boxshadow-index;
-    }
-    .index__inframe{
-        margin-left: 54px;
-        box-shadow: 10px 10px 0px 0px $color-boxshadow-index;
-    }
+        padding: 20px;
+        .img{
+            width: 310px;
+            height: 310px;
+            max-width: 100%;
+            box-shadow: 10px 10px 0px 0px $color-boxshadow-index;
+        }
+        .index__inframe{
+            margin-left: 54px;
+            box-shadow: 10px 10px 0px 0px $color-boxshadow-index;
+        }
+    }  
 }
 
 /* -------------------------------- SERVICIOS ------------------------------- */
 .portada__servicio{
-    width: 170vh;
+    width: 1100px;
     height: 80vh;
     margin-left: 250px;
     max-width: 100%;  
@@ -135,36 +136,38 @@ h1{
     margin-left: 250px;
     display: flex;
     justify-content: space-around;
-    h5{
-        font-size: 36px;
-        font-variant: small-caps;
-        text-align: center;
-        font-weight: 400;
-        padding-top: 20px;
-    }
-    .servicios__icon{
-        margin-top: 30px;
-        width: 300px;
-        height: 300px;
-        max-width: 100%;
-        background-color: gray;
-        border-radius: 35px;
-        box-shadow: 0px 0px 20px 5px whitesmoke;
-        transition: 0.5s;
-        &:hover{
-            transform: scale(1.05);
+    div{
+        .servicios__icon{
+            margin-top: 30px;
+            width: 300px;
+            height: 300px;
+            max-width: 100%;
+            background-color: gray;
+            border-radius: 35px;
+            box-shadow: 0px 0px 20px 5px whitesmoke;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.05);
+            }
+            
         }
-        
+        h5{
+            font-size: 36px;
+            font-variant: small-caps;
+            text-align: center;
+            font-weight: 400;
+            padding-top: 20px;
+        }
     }
 }
 .portada__crossfit{
-    width: 170vh;
+    width: 1100px;
     height: 80vh;
     margin-left: 250px;
     max-width: 100%;  
 }
 .portada__boxeo{
-    width: 170vh;
+    width: 1100px;
     height: 80vh;
     margin-left: 250px;
     max-width: 100%;  
@@ -228,7 +231,7 @@ h1{
 
 /* --------------------------------- TIENDA --------------------------------- */
 .portada__tienda{
-    width: 170vh;
+    width: 1100px;
     height: 80vh;
     margin-left: 250px;
     max-width: 100%;
@@ -667,8 +670,8 @@ h1{
         margin: 20px auto 20px 0px;
     }
     .portada__index{
-        width: 170vw;
-        height: 80vh;
+        width: 1100px;
+        height: 84vh;
         margin: 0;
     }
     .intro__p{
@@ -680,8 +683,8 @@ h1{
     }
     /*--- SERVICIOS ---*/
     .portada__servicio{
-        width: 170vw;
-        height: 80vh;
+        width: 1100px;
+        height: 84vh;
         margin: 0;
     }
     .servicios{
@@ -690,13 +693,13 @@ h1{
         margin: 0;
     }
     .portada__crossfit{
-        width: 170vw;
-        height: 80vh;
+        width: 1100px;
+        height: 84vh;
         margin: 0;  
     }
     .portada__boxeo{
-        width: 170vw;
-        height: 80vh;
+        width: 1100px;
+        height: 84vh;
         margin: 0;  
     }
     .crossbox{
@@ -707,8 +710,8 @@ h1{
 
     /*--- TIENDA ---*/
     .portada__tienda{
-        width: 170vw;
-        height: 80vh;
+        width: 1100px;
+        height: 84vh;
         margin: 0;
     }
     .tienda{
@@ -956,8 +959,8 @@ h1{
     }
     /*--- INDEX ---*/
     .portada__index{
-        width: 180vh;
-        height: 70vh;
+        width: 800px;
+        height: 60vh;
         margin: 0;  
     }
     h1{
@@ -988,8 +991,8 @@ h1{
     }
     /*--- SERVICIOS ---*/
     .portada__servicio{
-        width: 180vw;
-        height: 70vh;
+        width: 800px;
+        height: 60vh;
         margin: 0;
     }
     .servicios{
@@ -999,13 +1002,13 @@ h1{
         margin: 0;
     }
     .portada__crossfit{
-        width: 180vw;
-        height: 70vh;
+        width: 800px;
+        height: 60vh;
         margin: 0;  
     }
     .portada__boxeo{
-        width: 180vw;
-        height: 70vh;
+        width: 800px;
+        height: 60vh;
         margin: 0;  
     }
     .crossbox{
@@ -1019,8 +1022,8 @@ h1{
     }
     /*--- TIENDA ---*/
     .portada__tienda{
-        width: 180vw;
-        height: 70vh;
+        width: 800px;
+        height: 65vh;
         margin: 0;
     }
     .tienda{
@@ -1039,16 +1042,16 @@ h1{
             grid-template-columns:repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
             grid-column-gap: 10px;
-            height: 150vh;   
+            height: 130vh;   
             .remerah{
                 grid-area: remerah;
                 .img__remerah{
-                    width: 300px;
-                    height: 350px;
+                    width: 250px;
+                    height: 300px;
                 }
                 .btn__remeras{
                     margin-top: 5px;
-                    width: 300px;
+                    width: 250px;
                     height: 33px;
                     .btn__span{
                         font-size: 18px; 
@@ -1059,12 +1062,12 @@ h1{
                 grid-area: zapatillash;
                 .img__zapash{
                     margin-top: 5px;
-                    width: 300px;
-                    height: 200px;
+                    width: 250px;
+                    height: 150px;
                 }
                 .btn__zapatillas{
                     margin-top:5px;
-                    width: 300px;
+                    width: 250px;
                     height: 33px;
                     .btn__span{
                         font-size: 18px;
@@ -1075,12 +1078,12 @@ h1{
                 grid-area: calleras;
                 .img__calleras{
                     margin-top: 5px;
-                    width: 300px;
-                    height: 300px;
+                    width: 250px;
+                    height: 250px;
                 }
                 .btn__guantes{
                     margin-top: 5px;
-                    width: 300px;
+                    width: 250px;
                     height: 33px;
                     .btn__span{
                         font-size: 18px; 
@@ -1091,12 +1094,12 @@ h1{
                 grid-area: guantesb;
                 .img__guantesb{
                     margin-top: 5px;
-                    width: 300px;
-                    height: 300px;
+                    width: 250px;
+                    height: 250px;
                 }
                 .btn__guantes{
                     margin-top: 5px;
-                    width: 300px;
+                    width: 250px;
                     height: 33px;
                     .btn__span{
                         font-size: 18px;
@@ -1107,12 +1110,12 @@ h1{
                 grid-area: zapatillasm;
                 .img__zapasm{
                     margin-top: 5px;
-                    width: 300px;
-                    height: 200px;
+                    width: 250px;
+                    height: 150px;
                 }
                 .btn__zapatillas{
                     margin-top:5px;
-                    width: 300px;
+                    width: 250px;
                     height: 33px;
                     .btn__span{
                         font-size: 18px; 
@@ -1123,12 +1126,12 @@ h1{
                 grid-area: remeram;
                 .img__remeram{
                     margin-top: 30px;
-                    width: 300px;
-                    height: 350px;
+                    width: 250px;
+                    height: 300px;
                 }
                 .btn__remeras{
                     margin-top: 5px;
-                    width: 300px;
+                    width: 250px;
                     height: 33px;
                     .btn__span{
                         font-size: 18px; 
@@ -1267,8 +1270,8 @@ h1{
     }
     /*--- INDEX ---*/
     .portada__index{
-        width: 98vw;
-        height: 60vh;
+        width: 600px;
+        height: 55vh;
         margin: 0;  
     }
     h1{
@@ -1300,8 +1303,8 @@ h1{
     /*--- SERVICIOS ---*/
 
     .portada__servicio{
-        width: 98vw;
-        height: 60vh;
+        width: 600px;
+        height: 55vh;
         margin: 0;
     }
     .servicios{
@@ -1310,15 +1313,21 @@ h1{
         justify-content: space-around;
         align-items: center;
         margin: 0;
+        div{
+            .servicios__icon{
+                width: 250px;
+                height: 250px; 
+            }
+        }
     }
     .portada__crossfit{
-        width: 98vw;
-        height: 60vh;
+        width: 600px;
+        height: 55vh;
         margin: 0;  
     }
     .portada__boxeo{
-        width: 98vw;
-        height: 60vh;
+        width: 600px;
+        height: 55vh;
         margin: 0;  
     }
     .crossbox{
@@ -1353,11 +1362,10 @@ h1{
     }
     /*--- TIENDA ---*/
     .portada__tienda{
-        width: 98vw;
-        height: 60vh;
+        width: 600px;
+        height: 55vh;
         margin: 0;
     }
-
     .tienda{
         display: flex;
         justify-content: center;
@@ -1483,6 +1491,7 @@ h1{
         margin: 0 auto 0 auto;
         padding: 10px 0 10px 0;
         box-shadow: 0px 0px 30px 10px whitesmoke;
+        width: 350px;
         .formulario{
             display: flex;
             justify-content: center;
