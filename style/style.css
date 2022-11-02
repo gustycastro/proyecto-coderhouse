@@ -515,6 +515,14 @@ h1 {
   opacity: 70%;
 }
 
+.redes__titulo {
+  text-align: center;
+  font-size: 30px;
+  font-variant: small-caps;
+  font-style: italic;
+  text-shadow: -4px -4px 4px whitesmoke;
+}
+
 .redes {
   margin-top: 20px;
   margin-left: 250px;
