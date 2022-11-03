@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2? family=Arsenal&display=swap');
 @import "colores";
 
+@mixin display-flex-header($tipo, $direction, $align) {
+    display: $tipo;
+    flex-direction: $direction;
+    align-content: $align;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -35,63 +41,66 @@ h1{
     margin: 20px auto 20px 220px;
     font-weight:bold;
 }
-/* ---------------------------------- HEADER --------------------------------- */
+/* ----------- HEADER ----------- */
 .cont__menu{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
+    @include display-flex-header(flex, column, center);
     position: fixed;
     width: 250px;
     height: 100vh;
     background-color: $color-header;
-    h2{
-        text-align: center;
-        font-size: 30px;
-        margin: 10px;
-        background: url(../imagenes/animated-text-fill.png) repeat;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: titulo 30s linear infinite;
-        transform: translate3d(0,0,0);
-        backface-visibility: hidden;
-        font-weight:bold;
-        line-height:normal;
-        &::first-letter{
-            font-size: 50px;
+    nav{
+        h2{
+            text-align: center;
+            font-size: 30px;
+            margin: 10px;
+            background: url(../imagenes/animated-text-fill.png) repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titulo 30s linear infinite;
+            transform: translate3d(0,0,0);
+            backface-visibility: hidden;
+            font-weight:bold;
+            line-height:normal;
+            &::first-letter{
+                font-size: 50px;
+            } 
+            @keyframes titulo {
+                0% { background-position: 0% 50%; }
+                100% { background-position: 100% 50%; }
+            }  
+        }
+        .logo{
+            width: 250px;
+            height: 260px;
+        }
+        .linea{
+            border-top: 1px solid $color-letras_bordes-body;
+            margin: 25px auto 20px auto;
+            width: 210px;
+        }
+        ul{
+            li{
+                font-size: 17.5px;
+                padding: 10px 0;
+                margin-left: 30px;
+                list-style: none;
+                transition: 0.1s;
+                .icon__header{
+                    padding-right: 15px;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                    text-shadow: 0px 0px 10px red;
+                }
+            }
         } 
-        @keyframes titulo {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
-        }  
     }
-    .logo{
-        width: 250px;
-        height: 260px;
-    }
-    .linea{
-        border-top: 1px solid $color-letras_bordes-body;
-        margin: 25px auto 20px auto;
-        width: 210px;
-    }
-    nav ul li{
-        font-size: 18px;
-        padding: 10px 0;
-        margin-left: 30px;
-        list-style: none;
-        transition: 0.1s;
-        .icon__header{
-            padding-right: 15px;
-        }
-        &:hover{
-            transform: scale(1.1);
-            text-shadow: 0px 0px 10px red;
-        }
-    }
+    
     
 }
 
-/* ---------------------------------- INDEX --------------------------------- */
+/* ----------- INDEX ----------- */
 .portada__index{
     width: 1100px;
     height: 80vh;
@@ -125,12 +134,9 @@ h1{
     }  
 }
 
-/* -------------------------------- SERVICIOS ------------------------------- */
+/* ----------- SERVICIOS ----------- */
 .portada__servicio{
-    width: 1100px;
-    height: 80vh;
-    margin-left: 250px;
-    max-width: 100%;  
+    @extend .portada__index;  
 }
 .servicios{
     margin-left: 250px;
@@ -161,16 +167,10 @@ h1{
     }
 }
 .portada__crossfit{
-    width: 1100px;
-    height: 80vh;
-    margin-left: 250px;
-    max-width: 100%;  
+    @extend .portada__index;
 }
 .portada__boxeo{
-    width: 1100px;
-    height: 80vh;
-    margin-left: 250px;
-    max-width: 100%;  
+    @extend .portada__index;  
 }
 .crossbox{
     width: 100%;
@@ -228,18 +228,14 @@ h1{
     }
 }
 
-/* --------------------------------- TIENDA --------------------------------- */
+/* ----------- TIENDA ----------- */
 .portada__tienda{
-    width: 1100px;
-    height: 80vh;
-    margin-left: 250px;
-    max-width: 100%;
+    @extend .portada__index;
 }
 .tienda{
     display: flex;
     justify-content: end;
-    align-content: flex-end;
-    margin-top: 50px;
+    margin-top: 30px;
     padding-left: 10px;
     padding-right: 10px;
     .tienda__div{
@@ -424,11 +420,10 @@ h1{
                 }
             }
         }
-    }
-    
+    }  
 }
 
-/* -------------------------------- CONTACTO -------------------------------- */
+/* ----------- CONTACTO ----------- */
 .contacto{
     background-image: url(../imagenes/fondo_contacto.jpg);
     background-repeat: no-repeat;   
@@ -515,7 +510,6 @@ h1{
     font-size: 30px;
     font-variant: small-caps;
     font-style: italic;
-    text-shadow: -4px -4px 4px whitesmoke;
 }
 .redes{
     margin-top: 20px;
@@ -569,7 +563,7 @@ h1{
         border-top: 1px solid $color-letras_bordes-body;
         margin: 30px 40px 30px 40px; 
     }
-    /*Header Horizontal*/
+    /* Header Horizontal */
     .header{
         width: 100%;
         height: 70px;
@@ -621,7 +615,7 @@ h1{
         background: rgba(27,27,27,0.6);
         z-index: -1;
     }
-    /*----------------*/
+    /* ----------- */
     .contenido__menu{
         position: absolute;
         background: rgba(0,0,0,0.5);
@@ -671,7 +665,7 @@ h1{
             transform: translateX(0%);
         }
     }
-    /*--- INDEX ---*/
+    /* --- INDEX --- */
     h1{
         margin: 20px auto 20px 0px;
     }
@@ -687,7 +681,7 @@ h1{
     .border__imgbody{
         margin: 30px 30px 40px 30px;  
     }
-    /*--- SERVICIOS ---*/
+    /* --- SERVICIOS --- */
     .portada__servicio{
         width: 1100px;
         height: 84vh;
@@ -720,7 +714,7 @@ h1{
         }       
     }
 
-    /*--- TIENDA ---*/
+    /* --- TIENDA --- */
     .portada__tienda{
         width: 1100px;
         height: 84vh;
@@ -841,7 +835,7 @@ h1{
         }
         
     }
-    /*---CONTACTO---*/
+    /* ---CONTACTO--- */
     .contacto{
         padding-top: 77px;
     }
@@ -867,7 +861,7 @@ h1{
         border-top: 1px solid $color-letras_bordes-body;
         margin: 30px 40px 30px 40px; 
     }
-    /*Header Horizontal*/
+    /* Header Horizontal */
     .header{
         width: 100%;
         height: 70px;
@@ -919,7 +913,7 @@ h1{
         background: rgba(27,27,27,0.6);
         z-index: -1;
     }
-    /*----------------*/
+    /* ----------- */
     .contenido__menu{
         position: absolute;
         background: rgba(0,0,0,0.5);
@@ -969,7 +963,7 @@ h1{
             transform: translateX(0%);
         }
     }
-    /*--- INDEX ---*/
+    /* --- INDEX --- */
     .portada__index{
         width: 800px;
         height: 67vh;
@@ -1001,7 +995,7 @@ h1{
             }
         }  
     }
-    /*--- SERVICIOS ---*/
+    /* --- SERVICIOS --- */
     .portada__servicio{
         width: 800px;
         height: 67vh;
@@ -1052,7 +1046,7 @@ h1{
             }
         } 
     }
-    /*--- TIENDA ---*/
+    /* --- TIENDA --- */
     .portada__tienda{
         width: 800px;
         height: 65vh;
@@ -1172,7 +1166,7 @@ h1{
             }
         } 
     }
-    /*---CONTACTO---*/
+    /* ---CONTACTO--- */
     .contacto{
         padding-top: 77px;
     }
@@ -1198,7 +1192,7 @@ h1{
         border-top: 1px solid $color-letras_bordes-body;
         margin: 30px 40px 30px 40px; 
     }
-    /*Header Horizontal*/
+    /* Header Horizontal */
     .header{
         width: 100%;
         height: 70px;
@@ -1250,7 +1244,7 @@ h1{
         background: rgba(27,27,27,0.6);
         z-index: -1;
     }
-    /*----------------*/
+    /* ----------- */
     .contenido__menu{
         position: absolute;
         background: rgba(0,0,0,0.5);
@@ -1300,7 +1294,7 @@ h1{
             transform: translateX(0%);
         }
     }
-    /*--- INDEX ---*/
+    /* --- INDEX --- */
     .portada__index{
         width: 600px;
         height: 55vh;
@@ -1332,7 +1326,7 @@ h1{
             }
         }  
     }
-    /*--- SERVICIOS ---*/
+    /* --- SERVICIOS --- */
 
     .portada__servicio{
         width: 600px;
@@ -1392,7 +1386,7 @@ h1{
         } 
         
     }
-    /*--- TIENDA ---*/
+    /* --- TIENDA --- */
     .portada__tienda{
         width: 600px;
         height: 55vh;
@@ -1515,7 +1509,7 @@ h1{
             }
         } 
     }
-    /*---CONTACTO---*/
+    /* ---CONTACTO--- */
     .contacto{
         padding-top: 77px;
     }
