@@ -533,7 +533,7 @@ h1 {
     display: none;
   }
 }
-@media screen and (max-width: 1115px) and (min-width: 780px) {
+@media screen and (max-width: 1115px) and (min-width: 768px) {
   footer {
     border-top: 1px solid whitesmoke;
     margin: 30px 40px 30px 40px;
@@ -811,20 +811,12 @@ h1 {
   .formulario__border {
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
-    box-shadow: 0px 0px 30px 10px whitesmoke;
-  }
-  .formulario__border .formulario {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
   }
   .redes {
     margin: 20px auto 0 auto;
   }
 }
-@media screen and (max-width: 780px) and (min-width: 480px) {
+@media screen and (max-width: 768px) and (min-width: 480px) {
   footer {
     border-top: 1px solid whitesmoke;
     margin: 30px 40px 30px 40px;
@@ -1135,14 +1127,6 @@ h1 {
   .formulario__border {
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
-    box-shadow: 0px 0px 30px 10px whitesmoke;
-  }
-  .formulario__border .formulario {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
   }
   .redes {
     margin: 20px auto 0 auto;
@@ -1324,10 +1308,6 @@ h1 {
   .crossbox div .capa h6 {
     font-size: 30px;
     font-weight: 400;
-    font-variant: small-caps;
-    margin-bottom: 400px;
-    margin-top: 50px;
-    transition: all 500ms ease-out;
   }
   .crossbox div .capa p {
     font-size: 15px;
@@ -1464,15 +1444,7 @@ h1 {
   .formulario__border {
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
-    box-shadow: 0px 0px 30px 10px whitesmoke;
-    width: 350px;
-  }
-  .formulario__border .formulario {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+    width: 300px;
   }
   .redes {
     margin: 20px auto 0 auto;

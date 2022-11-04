@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2? family=Arsenal&display=swap');
 @import "colores";
 
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
 @mixin display-flex-header($tipo, $direction, $align) {
     display: $tipo;
     flex-direction: $direction;
@@ -117,7 +121,7 @@ h1{
 .border__imgbody{
     border: 2px solid $color-letras_bordes-body;
     border-radius: 15px;
-    margin: 30px 30px 40px 280px; 
+    margin: 30px 30px 40px 280px;
     .img__body{
         display: flex;
         padding: 20px;
@@ -550,7 +554,7 @@ h1{
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: ($desktop + 176px)){
     #btn__menu{
         display: none;
     }
@@ -558,7 +562,7 @@ h1{
         display: none;
     }
 }
-@media screen and (max-width: 1115px) and (min-width: 780px){
+@media screen and (max-width:($desktop + 91px)) and (min-width: $tablet){
     footer{
         border-top: 1px solid $color-letras_bordes-body;
         margin: 30px 40px 30px 40px; 
@@ -842,21 +846,13 @@ h1{
     .formulario__border{
         margin: 0 auto 0 auto;
         padding: 10px 0 10px 0;
-        box-shadow: 0px 0px 30px 10px whitesmoke;
-        .formulario{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-content: center;
-            align-items: center;
-        }
     } 
     .redes{
         margin: 20px auto 0 auto ;
     }
 }
 
-@media screen and (max-width: 780px) and (min-width: 480px){
+@media screen and (max-width: $tablet) and (min-width: $phone){
     footer{
         border-top: 1px solid $color-letras_bordes-body;
         margin: 30px 40px 30px 40px; 
@@ -1173,21 +1169,13 @@ h1{
     .formulario__border{
         margin: 0 auto 0 auto;
         padding: 10px 0 10px 0;
-        box-shadow: 0px 0px 30px 10px whitesmoke;
-        .formulario{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-content: center;
-            align-items: center;
-        }
     } 
     .redes{
         margin: 20px auto 0 auto ;
     }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: $phone){
     footer{
         border-top: 1px solid $color-letras_bordes-body;
         margin: 30px 40px 30px 40px; 
@@ -1327,7 +1315,6 @@ h1{
         }  
     }
     /* --- SERVICIOS --- */
-
     .portada__servicio{
         width: 600px;
         height: 55vh;
@@ -1365,10 +1352,6 @@ h1{
                 h6{
                     font-size: 30px;
                     font-weight: 400;
-                    font-variant: small-caps;
-                    margin-bottom: 400px;
-                    margin-top: 50px;
-                    transition: all 500ms ease-out;
                 }
                 p{
                     font-size: 15px;
@@ -1516,17 +1499,9 @@ h1{
     .formulario__border{
         margin: 0 auto 0 auto;
         padding: 10px 0 10px 0;
-        box-shadow: 0px 0px 30px 10px whitesmoke;
-        width: 350px;
-        .formulario{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-content: center;
-            align-items: center;
-        }
+        width: 300px;
     } 
     .redes{
-        margin: 20px auto 0 auto ;
+        margin: 20px auto 0 auto;
     }
 }
