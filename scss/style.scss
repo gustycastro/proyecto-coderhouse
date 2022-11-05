@@ -120,6 +120,7 @@ h1{
 }
 .border__imgbody{
     border: 2px solid $color-letras_bordes-body;
+    background-color: rgb(15, 15, 15);
     border-radius: 15px;
     margin: 30px 30px 40px 280px;
     .img__body{
@@ -129,11 +130,9 @@ h1{
             width: 310px;
             height: 310px;
             max-width: 100%;
-            box-shadow: 10px 10px 0px 0px $color-boxshadow-index;
         }
         .index__inframe{
             margin-left: 54px;
-            box-shadow: 10px 10px 0px 0px $color-boxshadow-index;
         }
     }  
 }
