@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(27, 27, 27);
+    font-family: 'Arsenal', sans-serif;
+    overflow-x: hidden;
+    line-height: normal;
+    color: whitesmoke; 
+    a{
+        color: whitesmoke !important;
+        text-decoration: none; 
+    }
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    font-variant: small-caps;
+    font-style: italic;
+    letter-spacing: 3px;
+    margin: 20px auto 20px 220px;
+    font-weight:bold;
+}
+
+/* ----------- INDEX ----------- */
+.portada__index{
+    width: 1100px;
+    height: 80vh;
+    margin-left: 250px;
+    max-width: 100%;  
+}
+.intro__p{
+    margin: 0 30px 0 280px;
+    font-size: 17.5px;
+    line-height: 1.5;
+    text-align: justify;
+    
+}
+.border__imgbody{
+    border: 2px solid whitesmoke;
+    background-color: rgb(15, 15, 15);
+    border-radius: 15px;
+    margin: 30px 30px 40px 280px;
+    .img__body{
+        display: flex;
+        padding: 20px;
+        .img{
+            width: 310px;
+            height: 310px;
+            max-width: 100%;
+        }
+        .index__inframe{
+            margin-left: 54px;
+        }
+    }  
+}
+
+/* ----------- SERVICIOS ----------- */
+.portada__servicio{
+    @extend .portada__index;  
+}
+.servicios{
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-around;
+    div{
+        .servicios__icon{
+            margin-top: 30px;
+            width: 250px;
+            height: 250px;
+            max-width: 100%;
+            background-color: gray;
+            border-radius: 25px;
+            box-shadow: 0px 0px 20px 5px whitesmoke;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.05);
+            }
+            
+        }
+        h5{
+            font-size: 36px;
+            font-variant: small-caps;
+            text-align: center;
+            font-weight: 400;
+            padding-top: 20px;
+        }
+    }
+}
+.portada__crossfit{
+    @extend .portada__index;
+}
+.portada__boxeo{
+    @extend .portada__index;  
+}
+.crossbox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 110px;
+    margin-top: 40px;
+    img{
+        width: 530px;
+        height: 530px;
+        box-shadow: 0px 0px 10px 5px whitesmoke;
+        transition: all 500ms ease-out;
+        &:hover{
+            transform: scale(1.05);
+        }   
+    }       
+    div{
+        position: relative;
+        cursor: pointer;
+        .capa{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background: rgba(27, 27, 27, 0.8);
+            transition: all 500ms ease-out;
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+            h6{
+                font-size: 50px;
+                font-weight: 400;
+                font-variant: small-caps;
+                margin-bottom: 400px;
+                margin-top: 50px;
+                transition: all 500ms ease-out;
+            }
+            p{
+                font-size: 20px;
+                line-height: 1.5;
+            }
+        }
+        &:hover img{
+            transform: scale(1.05);
+        }
+        &:hover .capa{
+            opacity: 1;
+            visibility: visible;
+            h6{
+                margin-top: 200px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* ----------- TIENDA ----------- */
+.portada__tienda{
+    @extend .portada__index;
+}
+.tienda{
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .tienda__div{
+        display: grid;
+        grid-template-areas: 
+            " remerah zapatillash guantesb remeram "  
+            " . zapatillasm calleras ."  
+        ; 
+        grid-template-columns:repeat(4, 1fr);
+        grid-template-rows: repeat(2, 230px);
+        grid-column-gap: 10px;
+        max-width: 163vh;
+        .remerah{
+            grid-area: remerah;
+            .img__remerah{
+                margin-top: 30px;
+                width: 300px;
+                height: 350px;
+                border-radius: 15px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            .btn__remeras{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5px;
+                width: 300px;
+                height: 33px;
+                border-radius: 7px;
+                cursor: pointer;
+                .btn__span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: whitesmoke; 
+                }
+            }
+        }
+        .zapatillash{
+            grid-area: zapatillash;
+            .img__zapash{
+                width: 250px;
+                height: 200px;
+                border-radius: 15px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            .btn__zapatillas{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top:5px;
+                width: 250px;
+                height: 33px;
+                border-radius: 7px;
+                cursor: pointer;
+                .btn__span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: whitesmoke; 
+                }
+            }    
+        }
+        .calleras{
+            grid-area: calleras;
+            .img__calleras{
+                margin-top: 13px;
+                width: 200px;
+                height: 200px;
+                border-radius: 15px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            .btn__guantes{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5px;
+                width: 200px;
+                height: 33px;
+                border-radius: 7px;
+                cursor: pointer;
+                .btn__span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: whitesmoke; 
+                }
+            }
+        }
+        .guantesb{
+            grid-area: guantesb;
+            .img__guantesb{
+                width: 200px;
+                height: 200px;
+                border-radius: 15px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            .btn__guantes{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5px;
+                width: 200px;
+                height: 33px;
+                border-radius: 7px;
+                cursor: pointer;
+                .btn__span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: whitesmoke; 
+                }
+            }
+        }
+        .zapatillasm{
+            grid-area: zapatillasm;
+            .img__zapasm{
+                margin-top: 13px;
+                width: 250px;
+                height: 200px;
+                border-radius: 15px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            .btn__zapatillas{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top:5px;
+                width: 250px;
+                height: 33px;
+                border-radius: 7px;
+                cursor: pointer;
+                .btn__span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color:whitesmoke; 
+                }
+            }
+        }
+        .remeram{
+            grid-area: remeram;
+            .img__remeram{
+                margin-top: 30px;
+                width: 300px;
+                height: 350px;
+                border-radius: 15px;
+                transition: 1s;
+                &:hover {
+                    transform: scale(0.95);
+                }
+            }
+            .btn__remeras{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 5px;
+                width: 300px;
+                height: 33px;
+                border-radius: 7px;
+                cursor: pointer;
+                .btn__span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: whitesmoke; 
+                }
+            }
+        }
+    }  
+}
+
+/* ----------- CONTACTO ----------- */
+.contacto{
+    background-image: url(../imagenes/fondo_contacto.jpg);
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+}

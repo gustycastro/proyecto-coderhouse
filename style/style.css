@@ -16,17 +16,6 @@ body a {
   text-decoration: none;
 }
 
-footer {
-  border-top: 1px solid whitesmoke;
-  margin: 30px 40px 30px 290px;
-}
-footer h4 {
-  text-align: center;
-  font-size: 16px;
-  padding-top: 20px;
-  font-weight: 400;
-}
-
 h1 {
   text-align: center;
   font-size: 40px;
@@ -35,65 +24,6 @@ h1 {
   letter-spacing: 3px;
   margin: 20px auto 20px 220px;
   font-weight: bold;
-}
-
-/* ----------- HEADER ----------- */
-.cont__menu {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  position: fixed;
-  width: 250px;
-  height: 100vh;
-  background-color: rgb(4, 0, 0);
-}
-.cont__menu nav h2 {
-  text-align: center;
-  font-size: 30px;
-  margin: 10px;
-  background: url(../imagenes/animated-text-fill.png) repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: titulo 30s linear infinite;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  font-weight: bold;
-  line-height: normal;
-}
-.cont__menu nav h2::first-letter {
-  font-size: 50px;
-}
-@keyframes titulo {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-.cont__menu nav .logo {
-  width: 250px;
-  height: 260px;
-}
-.cont__menu nav .linea {
-  border-top: 1px solid whitesmoke;
-  margin: 25px auto 20px auto;
-  width: 210px;
-}
-.cont__menu nav ul li {
-  font-size: 17.5px;
-  padding: 10px 0;
-  margin-left: 30px;
-  list-style: none;
-  transition: 0.1s;
-}
-.cont__menu nav ul li .icon__header {
-  padding-right: 15px;
-}
-.cont__menu nav ul li:hover {
-  transform: scale(1.1);
-  text-shadow: 0px 0px 10px red;
 }
 
 /* ----------- INDEX ----------- */
@@ -413,6 +343,64 @@ h1 {
   padding-top: 30px;
 }
 
+.cont__menu {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  background-color: rgb(4, 0, 0);
+}
+.cont__menu nav h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+  background: url(../imagenes/animated-text-fill.png) repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titulo 30s linear infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  font-weight: bold;
+  line-height: normal;
+}
+.cont__menu nav h2::first-letter {
+  font-size: 50px;
+}
+@keyframes titulo {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.cont__menu nav .logo {
+  width: 250px;
+  height: 260px;
+}
+.cont__menu nav .linea {
+  border-top: 1px solid whitesmoke;
+  margin: 25px auto 20px auto;
+  width: 210px;
+}
+.cont__menu nav ul li {
+  font-size: 17.5px;
+  padding: 10px 0;
+  margin-left: 30px;
+  list-style: none;
+  transition: 0.1s;
+}
+.cont__menu nav ul li .icon__header {
+  padding-right: 15px;
+}
+.cont__menu nav ul li:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px red;
+}
+
 .formulario__border {
   border: 1px solid whitesmoke;
   margin: 0 auto 0 600px;
@@ -522,6 +510,17 @@ h1 {
 }
 .redes .youtube:hover i {
   background: red;
+}
+
+footer {
+  border-top: 1px solid whitesmoke;
+  margin: 30px 40px 30px 290px;
+}
+footer h4 {
+  text-align: center;
+  font-size: 16px;
+  padding-top: 20px;
+  font-weight: 400;
 }
 
 @media (min-width: 1200px) {
@@ -696,9 +695,6 @@ h1 {
   .tienda {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .tienda .tienda__div {
     display: grid;
@@ -1012,9 +1008,6 @@ h1 {
   .tienda {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .tienda .tienda__div {
     display: grid;
@@ -1329,9 +1322,6 @@ h1 {
   .tienda {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .tienda .tienda__div {
     display: grid;
