@@ -1,3 +1,5 @@
+/* ----------- HEADER ----------- */
+
 @mixin display-flex-header($tipo, $direction, $align) {
     display: $tipo;
     flex-direction: $direction;
