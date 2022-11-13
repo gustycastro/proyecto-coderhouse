@@ -55,9 +55,11 @@ h1 {
   width: 310px;
   height: 310px;
   max-width: 100%;
+  box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.3333333333);
 }
 .border__imgbody .img__body .index__inframe {
   margin-left: 54px;
+  box-shadow: 5px 5px 0px 5px rgba(0, 0, 0, 0.3333333333);
 }
 
 /* ----------- SERVICIOS ----------- */
@@ -410,7 +412,7 @@ h1 {
   width: 400px;
   border-radius: 20px;
   padding: 20px 0 20px 0;
-  box-shadow: 0px 0px 40px 15px whitesmoke;
+  box-shadow: 0px 0px 20px 10px whitesmoke;
 }
 .formulario__border .formulario {
   display: flex;
@@ -470,9 +472,25 @@ h1 {
   border: none;
   background-color: gray;
   color: whitesmoke;
+  border-radius: 4px;
   cursor: pointer;
 }
 .formulario__border .formulario .enviar__btn:hover {
+  opacity: 70%;
+}
+.formulario__border .formulario .borrar__btn {
+  padding: 3px 0px;
+  margin-top: 3px;
+  width: 250px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  background-color: gray;
+  color: whitesmoke;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.formulario__border .formulario .borrar__btn:hover {
   opacity: 70%;
 }
 
@@ -518,7 +536,7 @@ h1 {
 
 /* ----------- FOOTER ----------- */
 footer {
-  border-top: 1px solid whitesmoke;
+  border-top: 1.5px solid whitesmoke;
   margin: 30px 40px 30px 290px;
 }
 footer h4 {
@@ -815,6 +833,7 @@ footer h4 {
     padding-top: 77px;
   }
   .formulario__border {
+    box-shadow: 0px 0px 10px 5px whitesmoke;
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
   }
@@ -1134,6 +1153,7 @@ footer h4 {
     padding-top: 77px;
   }
   .formulario__border {
+    box-shadow: 0px 0px 10px 5px whitesmoke;
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
   }
@@ -1454,6 +1474,7 @@ footer h4 {
     padding-top: 77px;
   }
   .formulario__border {
+    box-shadow: 0px 0px 10px 5px whitesmoke;
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
     width: 300px;

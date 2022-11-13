@@ -6,7 +6,7 @@
     width: 400px;
     border-radius: 20px;
     padding: 20px 0 20px 0;
-    box-shadow: 0px 0px 40px 15px whitesmoke;
+    box-shadow: 0px 0px 20px 10px whitesmoke;
     .formulario{
         display: flex;
         justify-content: center;
@@ -65,6 +65,22 @@
             border: none;
             background-color: gray;
             color: whitesmoke;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+                opacity: 70%;
+            }
+        }
+        .borrar__btn{
+            padding: 3px 0px;
+            margin-top: 3px;
+            width: 250px;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            background-color: gray;
+            color: whitesmoke;
+            border-radius: 4px;
             cursor: pointer;
             &:hover{
                 opacity: 70%;
