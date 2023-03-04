@@ -19,17 +19,12 @@ h1{
     font-variant: small-caps;
     font-style: italic;
     letter-spacing: 3px;
-    margin: 20px auto 20px 220px;
+    padding-top: 30px;
+    margin-left: 220px;
     font-weight:bold;
 }
 
 /* ----------- INDEX ----------- */
-.portada__index{
-    width: 1100px;
-    height: 80vh;
-    margin-left: 250px;
-    max-width: 100%;  
-}
 .intro__p{
     margin: 0 30px 0 280px;
     font-size: 17.5px;
@@ -38,37 +33,38 @@ h1{
     
 }
 .border__imgbody{
+    display: flex;
+    justify-content: center;
     border: 2px solid whitesmoke;
     background-color: rgb(15, 15, 15);
     border-radius: 15px;
     margin: 30px 30px 40px 280px;
+    max-width: 100%;
     .img__body{
         display: flex;
         padding: 20px;
         .img{
-            width: 310px;
-            height: 310px;
+            width: 350px;
+            height: 350px;
             max-width: 100%;
             box-shadow: 5px 5px 0px 5px #00000055;
         }
         .index__inframe{
-            margin-left: 54px;
+            margin-left: 30px;
             box-shadow: 5px 5px 0px 5px #00000055;
         }
     }  
 }
 
 /* ----------- SERVICIOS ----------- */
-.portada__servicio{
-    @extend .portada__index;  
-}
 .servicios{
     margin-left: 250px;
     display: flex;
     justify-content: space-around;
+    
     div{
         .servicios__icon{
-            margin-top: 30px;
+            margin-top: 150px;
             width: 250px;
             height: 250px;
             max-width: 100%;
@@ -89,12 +85,6 @@ h1{
             padding-top: 20px;
         }
     }
-}
-.portada__crossfit{
-    @extend .portada__index;
-}
-.portada__boxeo{
-    @extend .portada__index;  
 }
 .crossbox{
     width: 100%;
@@ -153,199 +143,16 @@ h1{
 }
 
 /* ----------- TIENDA ----------- */
-.portada__tienda{
-    @extend .portada__index;
-}
 .tienda{
+    height: 100vh;
+}
+.tienda__cons{
     display: flex;
-    justify-content: end;
-    margin-top: 50px;
-    margin-left: 250px;
-    margin-bottom: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    .tienda__div{
-        display: grid;
-        grid-template-areas: 
-            " remerah zapatillash guantesb remeram "  
-            " . zapatillasm calleras ."  
-        ; 
-        grid-template-columns:repeat(4, 1fr);
-        grid-template-rows: repeat(2, 230px);
-        grid-column-gap: 10px;
-        .remerah{
-            grid-area: remerah;
-            .img__remerah{
-                margin-top: 30px;
-                width: 300px;
-                height: 350px;
-                border-radius: 15px;
-                transition: 1s;
-                &:hover {
-                    transform: scale(0.95);
-                }
-            }
-            .btn__remeras{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 5px;
-                width: 300px;
-                height: 33px;
-                border-radius: 7px;
-                cursor: pointer;
-                .btn__span{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: whitesmoke; 
-                }
-            }
-        }
-        .zapatillash{
-            grid-area: zapatillash;
-            .img__zapash{
-                width: 250px;
-                height: 200px;
-                border-radius: 15px;
-                transition: 1s;
-                &:hover {
-                    transform: scale(0.95);
-                }
-            }
-            .btn__zapatillas{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top:5px;
-                width: 250px;
-                height: 33px;
-                border-radius: 7px;
-                cursor: pointer;
-                .btn__span{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: whitesmoke; 
-                }
-            }    
-        }
-        .calleras{
-            grid-area: calleras;
-            .img__calleras{
-                margin-top: 13px;
-                width: 200px;
-                height: 200px;
-                border-radius: 15px;
-                transition: 1s;
-                &:hover {
-                    transform: scale(0.95);
-                }
-            }
-            .btn__guantes{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 5px;
-                width: 200px;
-                height: 33px;
-                border-radius: 7px;
-                cursor: pointer;
-                .btn__span{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: whitesmoke; 
-                }
-            }
-        }
-        .guantesb{
-            grid-area: guantesb;
-            .img__guantesb{
-                width: 200px;
-                height: 200px;
-                border-radius: 15px;
-                transition: 1s;
-                &:hover {
-                    transform: scale(0.95);
-                }
-            }
-            .btn__guantes{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 5px;
-                width: 200px;
-                height: 33px;
-                border-radius: 7px;
-                cursor: pointer;
-                .btn__span{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: whitesmoke; 
-                }
-            }
-        }
-        .zapatillasm{
-            grid-area: zapatillasm;
-            .img__zapasm{
-                margin-top: 13px;
-                width: 250px;
-                height: 200px;
-                border-radius: 15px;
-                transition: 1s;
-                &:hover {
-                    transform: scale(0.95);
-                }
-            }
-            .btn__zapatillas{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top:5px;
-                width: 250px;
-                height: 33px;
-                border-radius: 7px;
-                cursor: pointer;
-                .btn__span{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color:whitesmoke; 
-                }
-            }
-        }
-        .remeram{
-            grid-area: remeram;
-            .img__remeram{
-                margin-top: 30px;
-                width: 300px;
-                height: 350px;
-                border-radius: 15px;
-                transition: 1s;
-                &:hover {
-                    transform: scale(0.95);
-                }
-            }
-            .btn__remeras{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 5px;
-                width: 300px;
-                height: 33px;
-                border-radius: 7px;
-                cursor: pointer;
-                .btn__span{
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: whitesmoke; 
-                }
-            }
-        }
-    }  
+    justify-content: center;
+    margin-top: 40px;
+    .construccion{
+        margin-left: 250px;
+    }
 }
 
 /* ----------- CONTACTO ----------- */
@@ -355,6 +162,6 @@ h1{
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    height: 100vh;
-    padding-top: 30px;
+    height: 120vh;
+    
 }

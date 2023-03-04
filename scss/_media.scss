@@ -2,38 +2,27 @@ $phone: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 
-@media (min-width: ($desktop + 176px)){
-    #btn__menu{
-        display: none;
-    }
+@media screen and (min-width: ($desktop + 176px)){
+
     .header{
         display: none;
     }
 }
-@media screen and (max-width:($desktop + 91px)) and (min-width: $tablet){
+@media screen and (max-width:($desktop + 176px)) and (min-width: $tablet){
+    .contenido__menu{
+        display: none;
+    }
     footer{
         border-top: 1px solid whitesmoke;
         margin: 30px 40px 30px 40px; 
     }
     /* Header Horizontal */
-    .header{
-        width: 100%;
-        height: 70px;
-        position: fixed;
-        background-color: rgb(4, 0, 0);
-        z-index: 9999;
+        .bg-dark {
+            background-color: rgb(4, 0, 0)!important;
+        }
         .contenido{
-            .btn__menu{
-                display: flex;
-                align-items: center;
-                margin-left: 20px;
-                .logo{
-                    margin-left: 10px;
-                    width: 60px;
-                    height: 70px;
-                }
                 h2{
-                    font-size: 20px;
+                    font-size: 23px;
                     margin-top: 10px;
                     background: url(../imagenes/animated-text-fill.png) repeat;
                     -webkit-background-clip: text;
@@ -52,80 +41,16 @@ $desktop: 1024px;
                         100% { background-position: 100% 50%; }
                     } 
                 } 
-                label{
-                    color: whitesmoke;
-                    font-size: 30px;
-                    cursor: pointer;
-                }
+            }
+        .navbar-nav{
+            .nav-link i{
+                padding: 4px;
             }
         }
-    }
-    .capaH{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: rgba(27,27,27,0.6);
-        z-index: -1;
-    }
-    /* ----------- */
-    .contenido__menu{
-        position: absolute;
-        background: rgba(0,0,0,0.5);
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        transition: all 500ms ease;
-        opacity: 0;
-        visibility: hidden;
-        .cont__menu{
-            width: 250px;
-            background:  rgb(4, 0, 0);
-            height: 100vh;
-            position: relative fixed;
-            z-index: 999;
-            transition: all 500ms ease;
-            transform: translateX(-100%);
-            nav{
-                transform: translateY(15%);
-                a{
-                    display:block;
-                    text-decoration: none;
-                    margin-right: 85px;
-                    margin-top: 15px;
-                    font-size: 16px;
-                }
-                .logo{
-                    display: none;
-                }
-                h2{
-                    display: none;
-                }
-                .linea{
-                    display: none;
-                }
-            }
-        }
-    }
-    #btn__menu{
-        display: none;
-        &:checked ~ .contenido__menu{
-            opacity: 1;
-            visibility: visible;
-        }
-        &:checked ~ .contenido__menu .cont__menu{
-            transform: translateX(0%);
-        }
-    }
+
     /* --- INDEX --- */
     h1{
         margin: 20px auto 20px 0px;
-    }
-    .portada__index{
-        padding-top: 70px;
-        width: 1100px;
-        height: 84vh;
-        margin: 0;
     }
     .intro__p{
         margin: 0 30px 0 30px;
@@ -134,29 +59,12 @@ $desktop: 1024px;
     .border__imgbody{
         margin: 30px 30px 40px 30px;  
     }
+
     /* --- SERVICIOS --- */
-    .portada__servicio{
-        padding-top: 70px;
-        width: 1100px;
-        height: 84vh;
-        margin: 0;
-    }
     .servicios{
         display: flex;
         justify-content: space-around;
         margin: 0;
-    }
-    .portada__crossfit{
-        padding-top: 70px;
-        width: 1100px;
-        height: 84vh;
-        margin: 0;  
-    }
-    .portada__boxeo{
-        padding-top: 70px;
-        width: 1100px;
-        height: 84vh;
-        margin: 0;  
     }
     .crossbox{
         display: flex;
@@ -171,129 +79,14 @@ $desktop: 1024px;
     }
 
     /* --- TIENDA --- */
-    .portada__tienda{
-        padding-top: 70px;
-        width: 1100px;
-        height: 84vh;
-        margin: 0;
-    }
-    .tienda{
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        .tienda__div{
-            display: grid;
-            grid-template-areas: 
-            " remerah remeram " 
-            " guantesb calleras "
-            " zapatillash zapatillasm "  
-            ; 
-            grid-template-columns:repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-column-gap: 10px;
-            height: 150vh;   
-            .remerah{
-                grid-area: remerah;
-                .img__remerah{
-                    width: 300px;
-                    height: 350px;
-                }
-                .btn__remeras{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .zapatillash{
-                grid-area: zapatillash;
-                .img__zapash{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 200px;
-                }
-                .btn__zapatillas{
-                    margin-top:5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px;
-                    }
-                }    
-            }
-            .calleras{
-                grid-area: calleras;
-                .img__calleras{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 300px;
-                }
-                .btn__guantes{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .guantesb{
-                grid-area: guantesb;
-                .img__guantesb{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 300px;
-                }
-                .btn__guantes{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px;
-                    }
-                }
-            }
-            .zapatillasm{
-                grid-area: zapatillasm;
-                .img__zapasm{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 200px;
-                }
-                .btn__zapatillas{
-                    margin-top:5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .remeram{
-                grid-area: remeram;
-                .img__remeram{
-                    margin-top: 30px;
-                    width: 300px;
-                    height: 350px;
-                }
-                .btn__remeras{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
+        .tienda__cons{
+            display: flex;
+            justify-content: center;
+            .construccion{
+                margin-left: 0;
             }
         }
-        
-    }
     /* ---CONTACTO--- */
-    .contacto{
-        padding-top: 77px;
-    }
     .formulario__border{
         box-shadow: 0px 0px 10px 5px whitesmoke;
         margin: 0 auto 0 auto;
@@ -305,29 +98,20 @@ $desktop: 1024px;
 }
 
 @media screen and (max-width: $tablet) and (min-width: $phone){
+    .contenido__menu{
+        display: none;
+    }
     footer{
         border-top: 1px solid whitesmoke;
         margin: 30px 40px 30px 40px; 
     }
     /* Header Horizontal */
-    .header{
-        width: 100%;
-        height: 70px;
-        position: fixed;
-        background-color: rgb(4, 0, 0);
-        z-index: 9999;
+        .bg-dark {
+            background-color: rgb(4, 0, 0)!important;
+        }
         .contenido{
-            .btn__menu{
-                display: flex;
-                align-items: center;
-                margin-left: 20px;
-                .logo{
-                    margin-left: 10px;
-                    width: 60px;
-                    height: 70px;
-                }
                 h2{
-                    font-size: 20px;
+                    font-size: 23px;
                     margin-top: 10px;
                     background: url(../imagenes/animated-text-fill.png) repeat;
                     -webkit-background-clip: text;
@@ -346,78 +130,14 @@ $desktop: 1024px;
                         100% { background-position: 100% 50%; }
                     } 
                 } 
-                label{
-                    color: whitesmoke;
-                    font-size: 30px;
-                    cursor: pointer;
-                }
+            }
+        .navbar-nav{
+            .nav-link i{
+                    padding: 4px;
             }
         }
-    }
-    .capaH{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: rgba(27,27,27,0.6);
-        z-index: -1;
-    }
-    /* ----------- */
-    .contenido__menu{
-        position: absolute;
-        background: rgba(0,0,0,0.5);
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        transition: all 500ms ease;
-        opacity: 0;
-        visibility: hidden;
-        .cont__menu{
-            width: 250px;
-            background: rgb(4, 0, 0);
-            height: 100vh;
-            position: relative fixed;
-            z-index: 999;
-            transition: all 500ms ease;
-            transform: translateX(-100%);
-            nav{
-                transform: translateY(15%);
-                a{
-                    display:block;
-                    text-decoration: none;
-                    margin-right: 85px;
-                    margin-top: 15px;
-                    font-size: 16px;
-                }
-                .logo{
-                    display: none;
-                }
-                h2{
-                    display: none;
-                }
-                .linea{
-                    display: none;
-                }
-            }
-        }
-    }
-    #btn__menu{
-        display: none;
-        &:checked ~ .contenido__menu{
-            opacity: 1;
-            visibility: visible;
-        }
-        &:checked ~ .contenido__menu .cont__menu{
-            transform: translateX(0%);
-        }
-    }
+
     /* --- INDEX --- */
-    .portada__index{
-        padding-top: 70px;
-        width: 800px;
-        height: 67vh;
-        margin: 0;  
-    }
     h1{
         margin: 20px auto 20px 0px;
     }
@@ -444,30 +164,12 @@ $desktop: 1024px;
             }
         }  
     }
+
     /* --- SERVICIOS --- */
-    .portada__servicio{
-        padding-top: 70px;
-        width: 800px;
-        height: 67vh;
-        margin: 0;
-    }
     .servicios{
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
         margin: 0;
-    }
-    .portada__crossfit{
-        padding-top: 70px;
-        width: 800px;
-        height: 67vh;
-        margin: 0;  
-    }
-    .portada__boxeo{
-        padding-top: 70px;
-        width: 800px;
-        height: 67vh;
-        margin: 0;  
     }
     .crossbox{
         display: flex;
@@ -478,10 +180,6 @@ $desktop: 1024px;
                 h6{
                     font-size: 30px;
                     font-weight: 400;
-                    font-variant: small-caps;
-                    margin-bottom: 400px;
-                    margin-top: 50px;
-                    transition: all 500ms ease-out;
                 }
                 p{
                     font-size: 15px;
@@ -493,134 +191,22 @@ $desktop: 1024px;
                 margin-bottom: 30px;
             }
             img{
-                width: 400px;
-                height: 400px;
+                width: 470px;
+                height: 470px;
             }
         } 
     }
+
     /* --- TIENDA --- */
-    .portada__tienda{
-        padding-top: 70px;
-        width: 800px;
-        height: 65vh;
-        margin: 0;
-    }
-    .tienda{
-        margin: auto;
+    .tienda__cons{
         display: flex;
-        justify-content: center;   
-        .tienda__div{
-            display: grid;
-            grid-template-areas: 
-            " remerah remeram " 
-            " guantesb calleras "
-            " zapatillash zapatillasm "  
-            ; 
-            grid-template-columns:repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-column-gap: 10px;
-            height: 130vh;   
-            .remerah{
-                grid-area: remerah;
-                .img__remerah{
-                    width: 250px;
-                    height: 300px;
-                }
-                .btn__remeras{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .zapatillash{
-                grid-area: zapatillash;
-                .img__zapash{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 150px;
-                }
-                .btn__zapatillas{
-                    margin-top:5px;
-                    width: 250px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px;
-                    }
-                }    
-            }
-            .calleras{
-                grid-area: calleras;
-                .img__calleras{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 250px;
-                }
-                .btn__guantes{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .guantesb{
-                grid-area: guantesb;
-                .img__guantesb{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 250px;
-                }
-                .btn__guantes{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px;
-                    }
-                }
-            }
-            .zapatillasm{
-                grid-area: zapatillasm;
-                .img__zapasm{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 150px;
-                }
-                .btn__zapatillas{
-                    margin-top:5px;
-                    width: 250px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .remeram{
-                grid-area: remeram;
-                .img__remeram{
-                    margin-top: 30px;
-                    width: 250px;
-                    height: 300px;
-                }
-                .btn__remeras{
-                    margin-top: 5px;
-                    width: 250px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-        } 
+        justify-content: center;
+        .construccion{
+            margin-left: 0;
+            width: 450px;
+        }
     }
     /* ---CONTACTO--- */
-    .contacto{
-        padding-top: 77px;
-    }
     .formulario__border{
         box-shadow: 0px 0px 10px 5px whitesmoke;
         margin: 0 auto 0 auto;
@@ -632,29 +218,21 @@ $desktop: 1024px;
 }
 
 @media screen and (max-width: $phone){
+    .contenido__menu{
+        display: none;
+    }
     footer{
         border-top: 1px solid whitesmoke;
         margin: 30px 40px 30px 40px; 
+
     }
     /* Header Horizontal */
-    .header{
-        width: 100%;
-        height: 70px;
-        position: fixed;
-        background-color: rgb(4, 0, 0);
-        z-index: 9999;
+        .bg-dark {
+            background-color: rgb(4, 0, 0)!important;
+        }
         .contenido{
-            .btn__menu{
-                display: flex;
-                align-items: center;
-                margin-left: 20px;
-                .logo{
-                    margin-left: 10px;
-                    width: 60px;
-                    height: 70px;
-                }
                 h2{
-                    font-size: 20px;
+                    font-size: 23px;
                     margin-top: 10px;
                     background: url(../imagenes/animated-text-fill.png) repeat;
                     -webkit-background-clip: text;
@@ -673,78 +251,14 @@ $desktop: 1024px;
                         100% { background-position: 100% 50%; }
                     } 
                 } 
-                label{
-                    color: whitesmoke;
-                    font-size: 30px;
-                    cursor: pointer;
-                }
+            }
+        .navbar-nav{
+            .nav-link i{
+                padding: 4px;
             }
         }
-    }
-    .capaH{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: rgba(27,27,27,0.6);
-        z-index: -1;
-    }
-    /* ----------- */
-    .contenido__menu{
-        position: absolute;
-        background: rgba(0,0,0,0.5);
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        transition: all 500ms ease;
-        opacity: 0;
-        visibility: hidden;
-        .cont__menu{
-            width: 250px;
-            background: rgb(4, 0, 0);
-            height: 100vh;
-            position: relative fixed;
-            z-index: 999;
-            transition: all 500ms ease;
-            transform: translateX(-100%);
-            nav{
-                transform: translateY(15%);
-                a{
-                    display:block;
-                    text-decoration: none;
-                    margin-right: 85px;
-                    margin-top: 15px;
-                    font-size: 16px;
-                }
-                .logo{
-                    display: none;
-                }
-                h2{
-                    display: none;
-                }
-                .linea{
-                    display: none;
-                }
-            }
-        }
-    }
-    #btn__menu{
-        display: none;
-        &:checked ~ .contenido__menu{
-            opacity: 1;
-            visibility: visible;
-        }
-        &:checked ~ .contenido__menu .cont__menu{
-            transform: translateX(0%);
-        }
-    }
+
     /* --- INDEX --- */
-    .portada__index{
-        padding-top: 70px;
-        width: 600px;
-        height: 55vh;
-        margin: 0;  
-    }
     h1{
         margin: 20px auto 20px 0px;
     }
@@ -771,37 +285,20 @@ $desktop: 1024px;
             }
         }  
     }
+
     /* --- SERVICIOS --- */
-    .portada__servicio{
-        padding-top: 70px;
-        width: 600px;
-        height: 55vh;
-        margin: 0;
-    }
     .servicios{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
         margin: 0;
+        height: 190vh;
         div{
             .servicios__icon{
                 width: 250px;
                 height: 250px; 
             }
         }
-    }
-    .portada__crossfit{
-        padding-top: 70px;
-        width: 600px;
-        height: 55vh;
-        margin: 0;  
-    }
-    .portada__boxeo{
-        padding-top: 70px;
-        width: 600px;
-        height: 55vh;
-        margin: 0;  
     }
     .crossbox{
         display: flex;
@@ -829,132 +326,17 @@ $desktop: 1024px;
         } 
         
     }
+
     /* --- TIENDA --- */
-    .portada__tienda{
-        padding-top: 70px;
-        width: 600px;
-        height: 55vh;
-        margin: 0;
-    }
-    .tienda{
-        margin: auto;
+    .tienda__cons{
         display: flex;
-        justify-content: center;   
-        .tienda__div{
-            display: grid;
-            grid-template-areas: 
-                " remerah" 
-                " remeram " 
-                " guantesb "
-                " calleras "
-                " zapatillash " 
-                " zapatillasm "  
-            ; 
-            grid-template-columns:repeat(1, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            height: 100%;   
-            .remerah{
-                grid-area: remerah;
-                .img__remerah{
-                    margin-top: -10px;
-                    width: 300px;
-                    height: 350px;
-                }
-                .btn__remeras{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .zapatillash{
-                grid-area: zapatillash;
-                .img__zapash{
-                    margin-top: -80px;
-                    width: 300px;
-                    height: 200px;
-                }
-                .btn__zapatillas{
-                    margin-top:5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px;
-                    }
-                }    
-            }
-            .calleras{
-                grid-area: calleras;
-                .img__calleras{
-                    margin-top: -38px;
-                    width: 300px;
-                    height: 300px;
-                }
-                .btn__guantes{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .guantesb{
-                grid-area: guantesb;
-                .img__guantesb{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 300px;
-                }
-                .btn__guantes{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px;
-                    }
-                }
-            }
-            .zapatillasm{
-                grid-area: zapatillasm;
-                .img__zapasm{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 200px;
-                }
-                .btn__zapatillas{
-                    margin-top:5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-            .remeram{
-                grid-area: remeram;
-                .img__remeram{
-                    margin-top: -2px;
-                    width: 300px;
-                    height: 350px;
-                }
-                .btn__remeras{
-                    margin-top: 5px;
-                    width: 300px;
-                    height: 33px;
-                    .btn__span{
-                        font-size: 18px; 
-                    }
-                }
-            }
-        } 
+        justify-content: center;
+        .construccion{
+            margin-left: 0;
+            width: 370px;
+        }
     }
     /* ---CONTACTO--- */
-    .contacto{
-        padding-top: 77px;
-    }
     .formulario__border{
         box-shadow: 0px 0px 10px 5px whitesmoke;
         margin: 0 auto 0 auto;

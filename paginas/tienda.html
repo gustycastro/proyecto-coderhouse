@@ -14,17 +14,28 @@
 </head>
 <body>
     <header class="header">
-		<div class="contenido">
-		    <div class="btn__menu">
-			    <label for="btn__menu"><i class=" fa-solid fa-bars"></i></label>
-                <a href="../index.html"><img class="logo" src="../imagenes/logo.png" alt="logo"></a>
-                <h2>WARRIORS</h2>
-		    </div>	
-		</div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <div class="contenido">
+                    <div class="btn__menu">
+                        <a href="../index.html"><h2>WARRIORS</h2></a>
+                    </div>	
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../paginas/servicios.html"><i class="fa-solid fa-dumbbell icon__header"></i>Servicios</a>
+                        <a class="nav-link" href="../paginas/tienda.html"><i class="fa-solid fa-shirt icon__header"></i>Tienda</a>
+                        <a class="nav-link" href="../paginas/contacto.html"><i class="fa-solid fa-address-book icon__header"></i>Contacto</a>
+                        <a class="nav-link" href="../paginas/contacto.html#redes"><i class="fa-solid fa-hashtag icon__header"></i>Redes</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-	<div class="capaH"></div>
     <!----------------->
-    <input type="checkbox" id="btn__menu">
     <div class="contenido__menu">
 	    <div class="cont__menu">
 		    <nav>
@@ -41,37 +52,11 @@
 	    </div>
     </div>
     <main>
-        <section>
-            <div><img class="portada__tienda" src="../imagenes/tienda.png" alt="portada"></div>
+        <section class="tienda">
             <h1>Tienda</h1>
-            <div class="tienda">
-                <div class="tienda__div">
-                    <div class="remerah">
-                        <img class="img__remerah" src="../imagenes/remera_h.jpg" alt="remera de hombre">
-                        <button type="button" class="btn btn-outline-secondary btn__remeras"><span class="btn__span">$4000</span></button>
-                    </div>
-                    <div class="zapatillash">
-                        <img class="img__zapash" src="../imagenes/zapas_h.jpg" alt="zapatillas de hombre">
-                        <button type="button" class="btn btn-outline-secondary btn__zapatillas"><span class="btn__span">$15000</span></button>
-                    </div>
-                    <div class="zapatillasm">
-                        <img class="img__zapasm" src="../imagenes/zapas_m.jpg" alt="zapatillas de mujer">
-                        <button type="button" class="btn btn-outline-secondary btn__zapatillas"><span class="btn__span">$15000</span></button>
-                    </div>
-                    <div class="calleras">
-                        <img class="img__calleras" src="../imagenes/descarga.jpg" alt="calleras">
-                        <button type="button" class="btn btn-outline-secondary btn__guantes"><span class="btn__span">$3500</span></button>
-                    </div>
-                    <div class="guantesb">
-                        <img class="img__guantesb" src="../imagenes/guantes_box.jpg" alt="guantes de boxeo">
-                        <button type="button" class="btn btn-outline-secondary btn__guantes"><span class="btn__span">$5000</span></button>
-                    </div>
-                    <div class="remeram">
-                        <img class="img__remeram" src="../imagenes/remera_m.jpg" alt="remera de mujer">
-                        <button type="button" class="btn btn-outline-secondary btn__remeras"><span class="btn__span">$4000</span></button>
-                    </div>    
-                </div>
-            </div>    
+            <div class="tienda__cons">
+                <img class="construccion" src="../imagenes/construccion.jpg" alt="">
+            </div>
         </section>
     </main>
     <footer>
