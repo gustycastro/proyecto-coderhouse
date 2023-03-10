@@ -457,7 +457,10 @@ footer h4 {
     margin-left: 0;
   }
   /* ---CONTACTO--- */
-  .formulario__border {
+  .center__form {
+    margin: 0 auto 0 auto;
+  }
+  .center__form .formulario__border {
     box-shadow: 0px 0px 10px 5px whitesmoke;
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
@@ -569,7 +572,10 @@ footer h4 {
     width: 450px;
   }
   /* ---CONTACTO--- */
-  .formulario__border {
+  .center__form {
+    margin: 0 auto 0 auto;
+  }
+  .center__form .formulario__border {
     box-shadow: 0px 0px 10px 5px whitesmoke;
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
@@ -687,7 +693,10 @@ footer h4 {
     width: 370px;
   }
   /* ---CONTACTO--- */
-  .formulario__border {
+  .center__form {
+    margin: 0 auto 0 auto;
+  }
+  .center__form .formulario__border {
     box-shadow: 0px 0px 10px 5px whitesmoke;
     margin: 0 auto 0 auto;
     padding: 10px 0 10px 0;
